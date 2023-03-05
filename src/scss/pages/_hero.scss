@@ -1,0 +1,47 @@
+.hero {
+  background: $dark;
+  // .hero__container
+
+  &__container {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 180px;
+    padding-right: 30%;
+    .button {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  // .hero__title
+
+  &__title {
+    color: $white;
+    font-size: 60px;
+    font-weight: 600;
+    span {
+      &:nth-child(1) {
+        color: $secondary;
+      }
+      &:nth-child(2) {
+        color: $primary;
+      }
+    }
+  }
+
+  // .hero__title
+
+  &__description {
+    margin: 24px 0 48px 0;
+  }
+
+  // .hero__illustration
+
+  &__illustration {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
