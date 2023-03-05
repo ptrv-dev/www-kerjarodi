@@ -1,10 +1,32 @@
-.section {
-  // .section__title
-
-  &__title {
-  }
-}
 .testimonials {
+  position: relative;
+  overflow: hidden;
+
+  // .testimonials__decorator
+
+  &__decorator {
+    position: absolute;
+    border-radius: 50%;
+    &:nth-child(1) {
+      width: 1200px;
+      height: 1200px;
+      left: -444px;
+      top: -25%;
+
+      background: rgba($secondary, 0.05);
+      filter: blur(200px);
+    }
+    &:nth-child(2) {
+      width: 1200px;
+      height: 1200px;
+      right: -400px;
+      bottom: -800px;
+
+      background: rgba($primary, 0.2);
+      filter: blur(200px);
+    }
+  }
+
   // .testimonials__container
 
   &__container {
