@@ -52,3 +52,20 @@ window.addEventListener('scroll', () => {
     ? header.classList.add('header_scroll')
     : header.classList.remove('header_scroll');
 });
+
+// animate
+
+function observerCallBack(entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('_animate_active');
+    } else {
+      // entry.target.classList.remove('active');
+    }
+  });
+}
+
+const targets = document.querySelectorAll('._animate');
+const observer = new IntersectionObserver(observerCallBack);
+
+targets.forEach((target) => observer.observe(target));
