@@ -1,0 +1,42 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: $font-family;
+	font-size: $font-size;
+	color: $font-color;
+	background: $body-background;
+	.no-scroll {
+		overflow: hidden;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	max-width: calc($container-width + 2 * $container-padding);
+	padding: 0 $container-padding;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 100%;
+}
