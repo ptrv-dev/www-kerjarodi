@@ -1,0 +1,28 @@
+.app {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  // .app__container
+
+  &__container {
+  }
+
+  // .app__get
+
+  &__get {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 48px 0;
+  }
+
+  // .app__illustration
+
+  &__illustration {
+    position: absolute;
+    bottom: -60%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
