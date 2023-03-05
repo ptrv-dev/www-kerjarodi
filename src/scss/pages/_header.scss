@@ -5,6 +5,17 @@
   left: 0;
   width: 100%;
 
+  transition: padding 0.2s ease-in-out, background 0.2s ease-in-out,
+    top 0.2s ease-in-out;
+
+  // .header_scroll
+
+  &_scroll {
+    top: 0;
+    padding: 10px 0;
+    background: $dark;
+  }
+
   // .header__container
 
   &__container {

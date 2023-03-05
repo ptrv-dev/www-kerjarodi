@@ -43,3 +43,12 @@ handleSlideChange();
 
 navigation.prev.addEventListener('click', handlePrevious);
 navigation.next.addEventListener('click', handleNext);
+
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  console.log(window.scrollY);
+  window.scrollY >= 50
+    ? header.classList.add('header_scroll')
+    : header.classList.remove('header_scroll');
+});
