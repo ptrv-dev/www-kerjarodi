@@ -39,6 +39,13 @@
       position: relative;
       z-index: 2;
     }
+    @media screen and (max-width: $md) {
+      padding-right: 20%;
+    }
+    @media screen and (max-width: $sm) {
+      padding-right: 0;
+      padding-top: 120px;
+    }
   }
 
   // .hero__title
@@ -61,5 +68,16 @@
     bottom: 0;
     right: 0;
     z-index: 1;
+    @media screen and (max-width: $lg) {
+      top: 50vh;
+      width: 100%;
+    }
+    @media screen and (max-width: $md) {
+      top: inherit;
+      bottom: 0;
+    }
+    @media screen and (max-width: $xs) {
+      display: none;
+    }
   }
 }
