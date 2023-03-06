@@ -6,6 +6,8 @@
   &__container {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 20px;
   }
 
   // .footer__col
@@ -19,18 +21,39 @@
 
     &_md {
       width: 25%;
+      @media screen and (max-width: $lg) {
+        width: 50%;
+      }
+      @media screen and (max-width: $sm) {
+        width: 100%;
+      }
     }
 
     // .footer__col_sm
 
     &_sm {
       width: 20%;
+      @media screen and (max-width: $lg) {
+        width: 25%;
+      }
+      @media screen and (max-width: $sm) {
+        width: 50%;
+      }
     }
 
     // .footer__col_lg
 
     &_lg {
       width: 35%;
+      @media screen and (max-width: $lg) {
+        width: 50%;
+      }
+      @media screen and (max-width: $md) {
+        width: 75%;
+      }
+      @media screen and (max-width: $sm) {
+        width: 100%;
+      }
     }
   }
 
@@ -82,11 +105,15 @@
     display: flex;
     align-items: center;
     gap: 24px;
+    @media screen and (max-width: $xs) {
+      gap: 8px;
+    }
   }
 
   // .footer__input
 
   &__input {
+    min-width: 0;
     flex: 1;
     font-weight: 400;
     font-size: 16px;

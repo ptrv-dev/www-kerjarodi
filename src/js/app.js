@@ -89,6 +89,10 @@ const testimonials = {
   col: document.querySelector('.testimonials__col'),
 };
 
+const footer = {
+  subscribeBtn: document.querySelector('.footer__button'),
+};
+
 const handleResize = () => {
   const width = window.innerWidth;
   console.log(width);
@@ -98,6 +102,12 @@ const handleResize = () => {
   } else {
     testimonials.container.prepend(testimonials.imagesWrapper);
     testimonials.col.prepend(testimonials.title);
+  }
+
+  if (width < 600) {
+    footer.subscribeBtn.innerHTML = 'Subscribe';
+  } else {
+    footer.subscribeBtn.innerHTML = 'Subscribe now';
   }
 };
 window.addEventListener('resize', handleResize);
