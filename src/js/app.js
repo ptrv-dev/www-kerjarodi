@@ -47,7 +47,6 @@ navigation.next.addEventListener('click', handleNext);
 const header = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {
-  console.log(window.scrollY);
   window.scrollY >= 50
     ? header.classList.add('header_scroll')
     : header.classList.remove('header_scroll');
@@ -69,3 +68,16 @@ const targets = document.querySelectorAll('._animate');
 const observer = new IntersectionObserver(observerCallBack);
 
 targets.forEach((target) => observer.observe(target));
+
+// adaptive
+
+const headerMenuButton = document.querySelector('.header__menu-button');
+const headerMenuClose = document.querySelector('.header__menu-close');
+const headerMenu = document.querySelector('.header__menu');
+
+headerMenuButton.addEventListener('click', () => {
+  headerMenu.classList.add('header__menu_active');
+});
+headerMenuClose.addEventListener('click', () => {
+  headerMenu.classList.remove('header__menu_active');
+});

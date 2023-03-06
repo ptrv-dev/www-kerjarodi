@@ -24,12 +24,16 @@ img {
   margin: 0 auto;
   max-width: calc($container-width + 2 * $container-padding);
   padding: 0 $container-padding;
+  @media screen and (max-width: calc($container-width + 2 * $container-padding)) {
+    max-width: 1024px;
+  }
 }
 
 .wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .button {

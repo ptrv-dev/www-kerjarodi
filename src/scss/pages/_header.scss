@@ -8,6 +8,80 @@
   transition: padding 0.2s ease-in-out, background 0.2s ease-in-out,
     top 0.2s ease-in-out;
 
+  // .header__menu
+
+  &__menu {
+    margin-left: 48px;
+    display: flex;
+    align-items: center;
+    flex: 1;
+
+    @media screen and (max-width: $md) {
+      background: $dark;
+      height: 100%;
+      max-width: 320px;
+      width: 100%;
+      padding: 32px;
+      position: fixed;
+      z-index: 99;
+      right: 0;
+      top: 0;
+      flex-direction: column;
+      gap: 32px;
+      transform: translateX(120%);
+      transition: transform 0.2s ease-in-out;
+      &_active {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  // .header__menu-close
+
+  &__menu-close {
+    display: none;
+    @media screen and (max-width: $md) {
+      left: 32px;
+      top: 32px;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      display: inline-flex;
+      justify-content: center;
+      span {
+        width: 100%;
+        height: 3px;
+        background: $white;
+        position: absolute;
+        &:nth-child(1) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  // .header__menu-button
+
+  &__menu-button {
+    display: none;
+    @media screen and (max-width: $md) {
+      display: inline-flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      width: 32px;
+      height: 21px;
+      justify-content: space-between;
+      span {
+        width: 100%;
+        height: 3px;
+        background: $white;
+      }
+    }
+  }
+
   // .header_scroll
 
   &_scroll {
@@ -21,13 +95,16 @@
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   // .header__nav
 
   &__nav {
-    margin: 0 48px;
     flex: 1;
+    @media screen and (max-width: $md) {
+      flex: auto 0 1;
+    }
   }
 
   // .header__actions
@@ -35,12 +112,22 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 16px;
+    @media screen and (min-width: calc(1px + $lg)) {
+      gap: 32px;
+    }
+    @media screen and (max-width: $md) {
+      flex-direction: column;
+      gap: 16px;
+    }
     hr {
       width: 1px;
       height: 24px;
       background: #474747;
       border: none;
+      @media screen and (max-width: $md) {
+        display: none;
+      }
     }
   }
 
@@ -73,6 +160,11 @@
     list-style: none;
     display: flex;
     gap: 48px;
+    @media screen and (max-width: $md) {
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+    }
   }
 
   // .nav__item
@@ -93,6 +185,7 @@
       color: $secondary;
       font-weight: 600;
     }
+    text-align: center;
   }
 }
 .button {
