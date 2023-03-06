@@ -33,6 +33,7 @@ img {
 }
 
 .button {
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
   background: $secondary;
