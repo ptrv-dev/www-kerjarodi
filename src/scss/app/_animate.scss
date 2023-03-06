@@ -49,6 +49,9 @@
     &._animate_active {
       transform: translateX(-64px);
       opacity: 1;
+      @media screen and (max-width: $xs) {
+        transform: translateX(0);
+      }
     }
   }
 }

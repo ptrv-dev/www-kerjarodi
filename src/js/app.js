@@ -81,3 +81,24 @@ headerMenuButton.addEventListener('click', () => {
 headerMenuClose.addEventListener('click', () => {
   headerMenu.classList.remove('header__menu_active');
 });
+
+const testimonials = {
+  imagesWrapper: document.querySelector('.testimonials__image'),
+  title: document.querySelector('.testimonials__title'),
+  container: document.querySelector('.testimonials__container'),
+  col: document.querySelector('.testimonials__col'),
+};
+
+const handleResize = () => {
+  const width = window.innerWidth;
+  console.log(width);
+  if (width < 768) {
+    testimonials.col.prepend(testimonials.imagesWrapper);
+    testimonials.container.prepend(testimonials.title);
+  } else {
+    testimonials.container.prepend(testimonials.imagesWrapper);
+    testimonials.col.prepend(testimonials.title);
+  }
+};
+window.addEventListener('resize', handleResize);
+window.addEventListener('load', handleResize);
